@@ -108,5 +108,42 @@
 
 #endregion
 
+using DayFour;
+
+
+try
+{
+    double result = Calculator.Divide(10, 0);
+    Console.WriteLine(result);
+}
+catch (DivideByZeroException ex)
+{
+    Console.WriteLine($"Error: {ex.Message}");
+}
+var rect = new Rectangle(5, 10);
+Console.WriteLine($"Before: {rect}");
+
+var copyRect = rect;
+rect.DoubleDimensionsByValue(copyRect);
+Console.WriteLine($"After DoubleDimensionsByValue: {rect}");
+
+rect.DoubleDimensionsByRef(ref rect);
+Console.WriteLine($"After DoubleDimensionsByRef: {rect}");
+
+
+Currency dollars = 100.0; 
+Console.WriteLine(dollars);
+
+double amount = (double)dollars; 
+Console.WriteLine(amount);
+
+
+var logger = new Logger();
+logger.LogMessage("Transaction completed.", "User: John", "Amount: $500", "Status: Success");
+
+var checker = new ScheduleChecker();
+Console.WriteLine(checker.CheckDay(DayOfWeek.Wednesday));
+Console.WriteLine(checker.CheckDay(DayOfWeek.Sunday));
+
 
 
