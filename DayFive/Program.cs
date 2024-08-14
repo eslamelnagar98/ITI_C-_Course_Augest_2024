@@ -1,4 +1,5 @@
 ﻿using DayFive;
+using DayFive.Assigment;
 #region Inheritance
 //Car car = new Car("Toyota", "Corolla", 2022);
 
@@ -27,5 +28,24 @@
 //paymentService = new PaymentService(new CachePaymentProcessor(), new CachePaymentProcessor());
 //paymentService.MakeMoney(100); 
 #endregion
+
+// Encapsulation
+var student = new Student("John", 20);
+student.UpdateGrade(85);
+Console.WriteLine($"{student.Name}'s grade: {student.GetGrade()}");
+
+// Abstraction using Interfaces
+var studentWithNotifier = new StudentWithNotifier("Jane", 22, new EmailNotifier());
+studentWithNotifier.UpdateGrade(90);
+
+// Inheritance and Polymorphism
+Zoo.DemonstratePolymorphism();
+
+// Abstraction using Abstract Classes
+var washingMachine = new WashingMachine { Brand = "LG", Model = "WM5000HVA", Power = 500 };
+var refrigerator = new Refrigerator { Brand = "Samsung", Model = "RF23M8570SG", Power = 400 };
+
+washingMachine.TurnOn();
+refrigerator.TurnOn();
 
 
