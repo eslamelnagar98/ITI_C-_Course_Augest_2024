@@ -106,15 +106,16 @@
 //Console.WriteLine(decimalValue); 
 #endregion
 
+#region Generics
+//var calculator = new Calculator<int>();
+//Console.WriteLine(calculator.Add(10, 20));
 
-using DaySix;
-var calculator = new Calculator<int>();
-Console.WriteLine(calculator.Add(10, 20));
+//var calculator2 = new Calculator<decimal>();
+//var calculator3 = new Calculator<long>();
+//var calculator4 = new Calculator<short>(); 
+#endregion
 
-var calculator2 = new Calculator<decimal>();
-var calculator3 = new Calculator<long>();
-var calculator4 = new Calculator<short>();
-
+#region Boxing And Unboxing
 //var shoppingCart = new ShoppingCart();
 //shoppingCart.Add("");
 //shoppingCart.Add(null);
@@ -129,5 +130,9 @@ var calculator4 = new Calculator<short>();
 //{
 //    var item = (int)array[i];
 //    Console.WriteLine(item);
-//}
+//} 
+#endregion
+
+
+
 
