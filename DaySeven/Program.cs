@@ -175,3 +175,57 @@
 
 //Console.WriteLine(string.Join(',', list.ToHashSet())); 
 #endregion
+
+
+List<int> numbers = new List<int> { 5, 3, 8, 1, 9, 2, 7 };
+
+// Sorting the list in ascending order
+List<int> sortedNumbers = SortAscending(numbers);
+PrintList("Sorted Numbers (Ascending):", sortedNumbers);
+
+// Filtering the list to only include even numbers
+List<int> evenNumbers = GetEvenNumbers(numbers);
+PrintList("Even Numbers:", evenNumbers);
+
+static List<int> SortAscending(List<int> numbers)
+{
+    numbers.Sort();
+    return numbers;
+}
+
+static List<int> GetEvenNumbers(List<int> numbers)
+{
+    List<int> result = new List<int>();
+    foreach (var number in numbers)
+    {
+        if (number % 2 == 0)
+        {
+            result.Add(number);
+        }
+    }
+    return result;
+}
+
+static void PrintList(string message, List<int> numbers)
+{
+    Console.WriteLine(message);
+    foreach (var number in numbers)
+    {
+        Console.Write(number + " ");
+    }
+    Console.WriteLine();
+}
+public class Base
+{
+    public int BaseValue { get; set; }
+
+    public void ShowBase() => Console.WriteLine("Base method");
+}
+
+public class Derived : Base
+{
+    public int DerivedValue { get; set; }
+
+    public void ShowDerived() => Console.WriteLine("Derived method");
+}
+
